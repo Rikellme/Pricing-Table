@@ -1,0 +1,189 @@
+:root {
+    --yellow: #ffcc29;
+    --blue: #1d539e;
+    --gray: #828799;
+    --page-background: #f9fbfc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--page-background);
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--blue);
+    color: white;
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > .informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 90%;
+    max-width: 555px;
+    margin-top: 3rem;;
+}
+
+header > .informations > h1 {
+    font-size: 48px;
+}
+
+header > .informations > p {
+    font-size: 18px;
+}
+
+.cards-wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: -9rem;
+}
+
+.cards-wrapper > .card {
+    background-color: var(--page-background);
+
+    max-width: 300px;
+    height: 470px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, .200);
+    position: relative;
+}
+
+.cards-wrapper > .card > .title {
+    padding: 2rem 1.5rem 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.cards-wrapper > .card.basic  {
+    height: 490px;
+}
+
+.cards-wrapper > .card.basic > .title {
+    background-color: var(--yellow);
+    padding: 1.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards-wrapper > .card.basic > .title > p {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.cards-wrapper > .card.basic > .card-informations > button {
+    background-color: var(--blue);
+    color: var(--page-background);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+
+.cards-wrapper > .card.basic > .card-informations > button:hover {
+    opacity: 0.9;
+}
+
+
+.cards-wrapper > .card > .title > button {
+    border: none;
+    background-color: var(--blue);
+    color: var(--page-background);
+    padding: .2rem .5rem;
+    border-radius: 20px;
+}
+
+.cards-wrapper > .card > .card-informations {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.cards-wrapper > .card > .card-informations > .pricing {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cards-wrapper > .card > .card-informations > .pricing > span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cards-wrapper > .card > .card-informations > .pricing > span > span {
+    color: var(--gray);
+    font-weight: normal;
+}
+
+.cards-wrapper > .card > .card-informations > .description {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.cards-wrapper > .card > .card-informations > .atributes{
+    display: flex;
+    gap: .5rem;
+}
+
+.cards-wrapper > .card > .card-informations > .atributes > p {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.cards-wrapper > .card > .card-informations > button {
+    background-color: var(--page-background);
+    color: var(--blue);
+    position: absolute;
+    bottom: 2rem;
+    width: 83%;
+    height: 49px;
+    border-radius: 10px;
+
+    border: 1px solid var(--blue);
+    
+    font-size: 18px;
+    font-weight: 400;
+    transition: .3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.cards-wrapper > .card > .card-informations > button:hover {
+    background-color: var(--blue);
+    color: var(--page-background);
+}
+
+@media screen and (min-width: 1000px) {
+    .cards-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: -9rem;
+    }
+}
